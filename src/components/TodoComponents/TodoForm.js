@@ -10,12 +10,12 @@ class TodoForm extends Component {
     }
 
     handleChanges = e => {
-        this.setState({ [e.target.todo]: e.target.value})
+        this.setState({ todo1: e.target.value})
     }
 
     submitTask = e => {
         e.preventDefault();
-        this.props.addTask(e, this.state.task);
+        this.props.addTask(e, this.state.todo1);
     }
 
     render() {

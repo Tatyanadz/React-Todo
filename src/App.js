@@ -60,7 +60,7 @@ class App extends Component {
           if (taskId === task.id) {
             return {
               ...task,
-              comppleted: !task.comppleted
+              completed: !task.completed
             };
           }
 
@@ -73,7 +73,7 @@ class App extends Component {
       e.preventDefault();
       console.log(this.state.list);
       this.setState({
-        list: this.state.list.filter(task => task.comppleted === false)
+        list: this.state.list.filter(task => task.completed !== true)
       });
       console.log(this.state.list);
     };
@@ -83,7 +83,7 @@ class App extends Component {
       return (
         <div className="App">
           <div className='header'>
-            <h1>To Do List</h1>
+            <h1>TODOS</h1>
             <TodoForm addTask={this.addTask} />
           </div>
           <TodoList
